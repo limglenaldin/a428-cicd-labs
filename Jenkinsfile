@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'node:18-buster-slim' 
             args '-p 3000:3000'
-            args '--dns 8.8.8.8'
+            args '--network host'
         }
     }
     stages {
